@@ -1,0 +1,56 @@
+﻿@model Alarma.Models.Alarmass
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Deseas borrar esta alarma?</h3>
+<div>
+    <h4>Alarmass</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.hora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hora)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.diasSemana)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.diasSemana)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Activar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Activar)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
